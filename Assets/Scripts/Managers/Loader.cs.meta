@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 18261699f77cd5945bf0380b3d913bef
+timeCreated: 1506025313
+licenseType: Free
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - gameManager: {fileID: 1763056443568900, guid: 7a8b0092f4a5e1f47a1e1fde459e4276,
+      type: 2}
+  - camera: {fileID: 1567344922380740, guid: 83e6f7e199af1844b8fd0203f761581e, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

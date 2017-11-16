@@ -1,0 +1,1770 @@
+fileFormatVersion: 2
+guid: 2329d9235ba36c149827203834baf6d6
+timeCreated: 1493711810
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: zabuza2_4
+    21300002: zabuza2_5
+    21300004: zabuza2_6
+    21300006: zabuza2_7
+    21300008: zabuza2_12
+    21300010: zabuza2_14
+    21300012: zabuza2_15
+    21300014: zabuza2_16
+    21300016: zabuza2_17
+    21300018: zabuza2_18
+    21300020: zabuza2_19
+    21300022: zabuza2_20
+    21300024: zabuza2_21
+    21300026: zabuza2_22
+    21300028: zabuza2_24
+    21300030: zabuza2_25
+    21300032: zabuza2_27
+    21300034: zabuza2_28
+    21300036: zabuza2_30
+    21300038: zabuza2_31
+    21300040: zabuza2_34
+    21300042: zabuza2_37
+    21300044: zabuza2_38
+    21300046: zabuza2_39
+    21300048: zabuza2_42
+    21300050: zabuza2_43
+    21300052: zabuza2_45
+    21300054: zabuza2_46
+    21300056: zabuza2_50
+    21300058: zabuza2_51
+    21300060: zabuza2_52
+    21300062: zabuza2_53
+    21300064: zabuza2_54
+    21300066: zabuza2_55
+    21300068: zabuza2_59
+    21300070: zabuza2_60
+    21300072: zabuza2_61
+    21300074: zabuza2_62
+    21300076: zabuza2_63
+    21300078: zabuza2_64
+    21300080: zabuza2_65
+    21300082: zabuza2_66
+    21300084: zabuza2_67
+    21300086: zabuza2_71
+    21300088: zabuza2_72
+    21300090: zabuza2_75
+    21300092: zabuza2_76
+    21300094: zabuza2_77
+    21300096: zabuza2_79
+    21300098: zabuza2_80
+    21300100: zabuza2_81
+    21300102: zabuza2_82
+    21300104: zabuza2_83
+    21300106: zabuza2_84
+    21300108: zabuza2_85
+    21300110: zabuza2_86
+    21300112: zabuza2_87
+    21300114: zabuza2_88
+    21300116: zabuza2_89
+    21300118: zabuza2_90
+    21300120: zabuza2_91
+    21300122: zabuza2_92
+    21300124: zabuza2_93
+    21300126: zabuza2_94
+    21300128: zabuza2_95
+    21300130: zabuza2_96
+    21300132: zabuza2_98
+    21300134: zabuza2_99
+    21300136: zabuza2_100
+    21300138: zabuza2_101
+    21300140: zabuza2_102
+    21300142: zabuza2_103
+    21300144: zabuza2_104
+    21300146: zabuza2_105
+    21300148: zabuza2_106
+    21300150: zabuza2_107
+    21300152: zabuza2_108
+    21300154: zabuza2_109
+    21300156: zabuza2_110
+    21300158: zabuza2_111
+    21300160: zabuza2_114
+    21300162: zabuza2_115
+    21300164: zabuza2_116
+    21300166: zabuza2_117
+    21300168: zabuza2_120
+    21300170: zabuza2_121
+    21300172: zabuza2_122
+    21300174: zabuza2_123
+    21300176: zabuza2_124
+    21300178: zabuza2_125
+    21300180: zabuza2_128
+    21300182: zabuza2_129
+    21300184: zabuza2_130
+    21300186: zabuza2_131
+    21300188: zabuza2_132
+    21300190: zabuza2_135
+    21300192: zabuza2_136
+    21300194: zabuza2_137
+    21300196: zabuza2_138
+    21300198: zabuza2_139
+    21300200: zabuza2_140
+    21300202: zabuza2_141
+    21300204: zabuza2_142
+    21300206: zabuza2_145
+    21300208: zabuza2_146
+    21300210: zabuza2_147
+    21300212: zabuza2_148
+    21300214: zabuza2_149
+    21300216: zabuza2_153
+    21300218: zabuza2_154
+    21300220: zabuza2_155
+    21300222: zabuza2_156
+    21300224: zabuza2_157
+    21300226: zabuza2_158
+    21300228: zabuza2_159
+    21300230: zabuza2_162
+    21300232: zabuza2_163
+    21300234: zabuza2_164
+    21300236: zabuza2_169
+    21300238: zabuza2_173
+    21300240: zabuza2_174
+    21300242: zabuza2_181
+    21300244: zabuza2_0
+    21300246: zabuza2_73
+    21300248: zabuza2_74
+    21300250: zabuza2_78
+    21300252: zabuza2_97
+    21300254: zabuza2_150
+    21300256: zabuza2_160
+    21300258: zabuza2_161
+    21300260: zabuza2_165
+    21300262: zabuza2_166
+    21300264: zabuza2_171
+    21300266: zabuza2_172
+    21300268: zabuza2_176
+    21300270: zabuza2_177
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: 2
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 10
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 16
+  alphaUsage: 1
+  alphaIsTransparency: 0
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: iPhone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Android
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: zabuza2_4
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1749
+        width: 59
+        height: 55
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: zabuza2_5
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 1749
+        width: 59
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: zabuza2_6
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 1749
+        width: 59
+        height: 53
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: zabuza2_7
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 1749
+        width: 59
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: zabuza2_12
+      rect:
+        serializedVersion: 2
+        x: 475
+        y: 1702
+        width: 63
+        height: 60
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: zabuza2_14
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1686
+        width: 37
+        height: 51
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: zabuza2_15
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 1686
+        width: 40
+        height: 50
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: zabuza2_16
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 1686
+        width: 39
+        height: 51
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: zabuza2_17
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 1686
+        width: 36
+        height: 50
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: zabuza2_18
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 1686
+        width: 37
+        height: 51
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: zabuza2_19
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 1688
+        width: 40
+        height: 50
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: zabuza2_20
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 1686
+        width: 39
+        height: 51
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: zabuza2_21
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 1686
+        width: 36
+        height: 50
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: zabuza2_22
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 1655
+        width: 57
+        height: 59
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: zabuza2_24
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1626
+        width: 59
+        height: 49
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: zabuza2_25
+      rect:
+        serializedVersion: 2
+        x: 457
+        y: 1633
+        width: 52
+        height: 41
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: zabuza2_27
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1548
+        width: 63
+        height: 67
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: zabuza2_28
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 1548
+        width: 63
+        height: 67
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: zabuza2_30
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1476
+        width: 70
+        height: 62
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: zabuza2_31
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 1476
+        width: 70
+        height: 62
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: zabuza2_34
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1370
+        width: 68
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: zabuza2_37
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1302
+        width: 46
+        height: 55
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: zabuza2_38
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 1302
+        width: 46
+        height: 55
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: zabuza2_39
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 1302
+        width: 46
+        height: 55
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: zabuza2_42
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1237
+        width: 73
+        height: 49
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: zabuza2_43
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 1237
+        width: 64
+        height: 49
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: zabuza2_45
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 1176
+        width: 45
+        height: 51
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: zabuza2_46
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 1176
+        width: 45
+        height: 51
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: zabuza2_50
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 1091
+        width: 88
+        height: 82
+      alignment: 9
+      pivot: {x: 0.21923222, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: zabuza2_51
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1091
+        width: 63
+        height: 60
+      alignment: 9
+      pivot: {x: 0.33599588, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: zabuza2_52
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 1091
+        width: 51
+        height: 75
+      alignment: 9
+      pivot: {x: 0.367874, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: zabuza2_53
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 1091
+        width: 96
+        height: 76
+      alignment: 9
+      pivot: {x: 0.23327033, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: zabuza2_54
+      rect:
+        serializedVersion: 2
+        x: 316
+        y: 1091
+        width: 87
+        height: 50
+      alignment: 9
+      pivot: {x: 0.24698578, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: zabuza2_55
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 1087
+        width: 84
+        height: 54
+      alignment: 9
+      pivot: {x: 0.2700377, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: zabuza2_59
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 977
+        width: 43
+        height: 61
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: zabuza2_60
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 977
+        width: 50
+        height: 55
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: zabuza2_61
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 977
+        width: 41
+        height: 51
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: zabuza2_62
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 978
+        width: 80
+        height: 65
+      alignment: 9
+      pivot: {x: 0.2553951, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: zabuza2_63
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 977
+        width: 91
+        height: 104
+      alignment: 9
+      pivot: {x: 0.47794485, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: zabuza2_64
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 977
+        width: 78
+        height: 70
+      alignment: 9
+      pivot: {x: 0.7508768, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: zabuza2_65
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 977
+        width: 80
+        height: 52
+      alignment: 9
+      pivot: {x: 0.7383331, y: 0.0096482495}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: zabuza2_66
+      rect:
+        serializedVersion: 2
+        x: 477
+        y: 977
+        width: 51
+        height: 52
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: zabuza2_67
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 977
+        width: 63
+        height: 52
+      alignment: 9
+      pivot: {x: 0.4362851, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: zabuza2_71
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 871
+        width: 54
+        height: 97
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: zabuza2_72
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 871
+        width: 90
+        height: 87
+      alignment: 9
+      pivot: {x: 0.2409857, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: zabuza2_74
+      rect:
+        serializedVersion: 2
+        x: 470
+        y: 889
+        width: 32
+        height: 39
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: zabuza2_75
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 871
+        width: 98
+        height: 41
+      alignment: 9
+      pivot: {x: 0.25, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: zabuza2_76
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 872
+        width: 98
+        height: 36
+      alignment: 9
+      pivot: {x: 0.25, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: zabuza2_77
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 871
+        width: 98
+        height: 36
+      alignment: 9
+      pivot: {x: 0.24, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: zabuza2_78
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 849
+        width: 34
+        height: 34
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: zabuza2_79
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 843
+        width: 59
+        height: 49
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: zabuza2_83
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 801
+        width: 46
+        height: 59
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: zabuza2_84
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 803
+        width: 46
+        height: 57
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: zabuza2_85
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 802
+        width: 62
+        height: 58
+      alignment: 9
+      pivot: {x: 0.29971805, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: zabuza2_86
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 802
+        width: 52
+        height: 58
+      alignment: 9
+      pivot: {x: 0.36866114, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: zabuza2_87
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 802
+        width: 52
+        height: 58
+      alignment: 9
+      pivot: {x: 0.39254087, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: zabuza2_88
+      rect:
+        serializedVersion: 2
+        x: 486
+        y: 785
+        width: 59
+        height: 49
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: zabuza2_92
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 734
+        width: 36
+        height: 58
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: zabuza2_93
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 734
+        width: 52
+        height: 58
+      alignment: 9
+      pivot: {x: 0.38060093, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: zabuza2_94
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 734
+        width: 48
+        height: 58
+      alignment: 9
+      pivot: {x: 0.40945563, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: zabuza2_95
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 734
+        width: 47
+        height: 58
+      alignment: 9
+      pivot: {x: 0.4735802, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: zabuza2_96
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 734
+        width: 46
+        height: 57
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: zabuza2_97
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 694
+        width: 64
+        height: 66
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: zabuza2_101
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 646
+        width: 58
+        height: 50
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: zabuza2_102
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 646
+        width: 73
+        height: 58
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: zabuza2_103
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 646
+        width: 68
+        height: 58
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: zabuza2_104
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 646
+        width: 70
+        height: 50
+      alignment: 9
+      pivot: {x: 0.5620876, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: zabuza2_106
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 577
+        width: 59
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: zabuza2_107
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 578
+        width: 59
+        height: 53
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: zabuza2_108
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 578
+        width: 59
+        height: 53
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: zabuza2_109
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 578
+        width: 59
+        height: 53
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: zabuza2_110
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 578
+        width: 43
+        height: 58
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: zabuza2_111
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 578
+        width: 44
+        height: 58
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: zabuza2_114
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 513
+        width: 46
+        height: 55
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: zabuza2_115
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 486
+        width: 96
+        height: 75
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: zabuza2_116
+      rect:
+        serializedVersion: 2
+        x: 362
+        y: 488
+        width: 96
+        height: 72
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: zabuza2_117
+      rect:
+        serializedVersion: 2
+        x: 485
+        y: 486
+        width: 96
+        height: 75
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: zabuza2_120
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 446
+        width: 46
+        height: 57
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: zabuza2_121
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 446
+        width: 46
+        height: 57
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: zabuza2_122
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 446
+        width: 51
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: zabuza2_123
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 446
+        width: 51
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: zabuza2_124
+      rect:
+        serializedVersion: 2
+        x: 458
+        y: 408
+        width: 64
+        height: 66
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: zabuza2_125
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 407
+        width: 64
+        height: 66
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: zabuza2_128
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 368
+        width: 46
+        height: 62
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: zabuza2_129
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 368
+        width: 46
+        height: 62
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: zabuza2_130
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 368
+        width: 46
+        height: 62
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: zabuza2_131
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 368
+        width: 46
+        height: 62
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: zabuza2_132
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 340
+        width: 64
+        height: 66
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: zabuza2_135
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 261
+        width: 64
+        height: 66
+      alignment: 9
+      pivot: {x: 0.5290989, y: 0.0984534}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: zabuza2_136
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 261
+        width: 31
+        height: 96
+      alignment: 9
+      pivot: {x: 0.48520342, y: 0.12654527}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: zabuza2_137
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 261
+        width: 75
+        height: 75
+      alignment: 9
+      pivot: {x: 0.34361115, y: 0.25128785}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: zabuza2_138
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 261
+        width: 59
+        height: 75
+      alignment: 9
+      pivot: {x: 0.5336211, y: 0.50974566}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: zabuza2_139
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 261
+        width: 82
+        height: 51
+      alignment: 9
+      pivot: {x: 0.5083406, y: 0.42236927}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: zabuza2_140
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 261
+        width: 36
+        height: 91
+      alignment: 9
+      pivot: {x: 0.515525, y: 0.17535736}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: zabuza2_141
+      rect:
+        serializedVersion: 2
+        x: 366
+        y: 261
+        width: 56
+        height: 65
+      alignment: 9
+      pivot: {x: 0.43967602, y: 0.09674354}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: zabuza2_142
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 273
+        width: 64
+        height: 66
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: zabuza2_145
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 206
+        width: 64
+        height: 66
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: zabuza2_146
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 189
+        width: 63
+        height: 59
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: zabuza2_147
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 175
+        width: 63
+        height: 73
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: zabuza2_148
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 178
+        width: 63
+        height: 69
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: zabuza2_149
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 181
+        width: 63
+        height: 66
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: zabuza2_150
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 139
+        width: 63
+        height: 66
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: zabuza2_153
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 169
+        width: 14
+        height: 19
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: zabuza2_154
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 113
+        width: 30
+        height: 40
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: zabuza2_155
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 113
+        width: 28
+        height: 44
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: zabuza2_156
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 113
+        width: 29
+        height: 46
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: zabuza2_157
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 113
+        width: 29
+        height: 51
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: zabuza2_158
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 72
+        width: 63
+        height: 66
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: zabuza2_159
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 1
+        width: 63
+        height: 103
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: zabuza2_160
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 8
+        width: 60
+        height: 81
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: zabuza2_161
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 1
+        width: 83
+        height: 93
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: zabuza2_164
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 76
+        width: 11
+        height: 8
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: zabuza2_165
+      rect:
+        serializedVersion: 2
+        x: 347
+        y: 76
+        width: 6
+        height: 5
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: zabuza2_166
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1
+        width: 48
+        height: 69
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: zabuza2_171
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 63
+        width: 24
+        height: 5
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: zabuza2_172
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 7
+        width: 63
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: zabuza2_176
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 49
+        width: 11
+        height: 9
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: zabuza2_177
+      rect:
+        serializedVersion: 2
+        x: 347
+        y: 49
+        width: 6
+        height: 5
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
