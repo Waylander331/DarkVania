@@ -5,7 +5,6 @@ using UnityEngine;
 public class Loader : MonoBehaviour {
 
     public GameObject gameManager;
-    public GameObject playerCamera;
     public GameObject HudManager;
 
     // Use this for initialization
@@ -21,8 +20,4 @@ public class Loader : MonoBehaviour {
             Instantiate(HudManager);
         }
 	}
-    public void Start()
-    {
-        playerCamera.SetActive(true);
-    }
 }

@@ -28,7 +28,7 @@ public class Skeleton : MonoBehaviour {
     private bool facingLeft;
     private bool facingRight = true;
 
-    public enum State { Chase, Patrol, Attack, Wait, Dead}
+    public enum State { Chase, Patrol, Attack, Staggered, Wait, Dead}
     public State state;
 
     private Vector2 waypoint;

@@ -30,7 +30,7 @@ public class HandleSaveFile : MonoBehaviour{
     {
         for (int i = 1; i < 4; i++)
         {
-            var path = "C:/Users/Waylander/Documents/GitHub/Ninja Warrior/DarkVania/Assets/Save Files/" + i;
+            var path = "C:/Users/Waylander/Documents/GitHub/DarkVania/Assets/Save Files/" + i;
             if(File.Exists(path))
             {
                 var button = MainMenuManager.MenuManager.saveMenu.saveButtons[i - 1];
@@ -46,7 +46,7 @@ public class HandleSaveFile : MonoBehaviour{
     // If the current button holds a save file, switch to menu 5, else switch to menu 4
     public void GetSaveFileMenu()
     {
-        var path = "C:/Users/Waylander/Documents/GitHub/Ninja Warrior/DarkVania/Assets/Save Files/" + saveButtonId; 
+        var path = "C:/Users/Waylander/Documents/GitHub/DarkVania/Assets/Save Files/" + saveButtonId; 
         if (File.Exists(path))
         {
             MainMenuManager.MenuManager.SwitchMenuState(5);
@@ -92,7 +92,7 @@ public class HandleSaveFile : MonoBehaviour{
     // Save a SaveFile at path and reshape/rename linked button
     private void CreateUserSaveFile()
     {
-        var path = "C:/Users/Waylander/Documents/GitHub/Ninja Warrior/DarkVania/Assets/Save Files/" + saveButtonId;
+        var path = "C:/Users/Waylander/Documents/GitHub/DarkVania/Assets/Save Files/" + saveButtonId;
         var newSave = new SaveFileTemplate(inputSaveName.text, (int)GameManager.Gm.difficulty, saveButtonId);
         HandleXmlFile.CreateXmlFile(path, newSave);
         ModUI.ChangeButtonVisual(saveButton, saveButtonColors);
@@ -103,7 +103,7 @@ public class HandleSaveFile : MonoBehaviour{
     // Delete a Save File
     public void DeleteUserSaveFile()
     {
-        var path = "C:/Users/Waylander/Documents/GitHub/Ninja Warrior/DarkVania/Assets/Save Files/" + saveButtonId;
+        var path = "C:/Users/Waylander/Documents/GitHub/DarkVania/Assets/Save Files/" + saveButtonId;
         HandleXmlFile.DeleteFile(path);
     }
 

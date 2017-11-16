@@ -4,7 +4,7 @@ using System.Collections;
 public class PlayerFunction : MonoBehaviour {
 
     public GameManager gm;
-    public PlayerController pc;
+    private PlayerController pc;
 
     private float baseSpeed;
     private bool _grounded;
@@ -37,7 +37,7 @@ public class PlayerFunction : MonoBehaviour {
 	// Use this for initialization
 	void Start ()
     {
-        
+        pc = GetComponent<PlayerController>();
         _grounded = false;
         baseSpeed = pc.playerSpeed;
         resetTimer = timer;

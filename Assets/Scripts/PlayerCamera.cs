@@ -28,7 +28,7 @@ public class PlayerCamera : MonoBehaviour {
 
     private void AdjustFieldOfView()
     {
-        vAxis = Input.GetAxis("Vertical");
+        vAxis = Input.GetAxis("Zoom");
         if(vAxis > 0.5 && playerCamera.orthographicSize < maxFieldOfView)
         {
             playerCamera.orthographicSize += vAxis / 10;
