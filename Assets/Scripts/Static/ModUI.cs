@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
-public static class ModUI {
+public static class UIUtilities {
 
     public static void ChangeButtonVisual(Button button, Color normalC, Color highlightedC, Color pressedC)
     {

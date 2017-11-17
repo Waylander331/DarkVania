@@ -3,17 +3,18 @@ using UnityEngine;
 
 public class SaveMenu : MonoBehaviour {
 
-    MainMenuManager menuManager;
+    MainMenuManager menuManager; //t'as pas vraiment besoin de garder une variable pour une clsse qui a un accesseur
 
     public Button[] saveButtons;
 
     public CanvasGroup canvasGroupSaveMenu;
+    
 
-    // Use this for initialization
     void Start () {
-        menuManager = MainMenuManager.MenuManager;
+        menuManager = MainMenuManager.Instance;
 	}
 
+    //ces fonctions-ci ne sont pas utilisees *******************************************
     public void AssignSaveButton(Button button)
     {
         menuManager.handleSaveFile.saveButton = button;

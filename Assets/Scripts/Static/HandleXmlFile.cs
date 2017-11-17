@@ -2,7 +2,7 @@
 using System.IO;
 
 //Class used to create Xml File
-public static class HandleXmlFile {
+public static class XMLFilHelper {
 
     // Create an Xml file of object type
     public static void CreateXmlFile(string path, object file)

@@ -7,7 +7,7 @@ public class PlayerFunction : MonoBehaviour {
     private PlayerController pc;
 
     private float baseSpeed;
-    private bool _grounded;
+    private bool grounded;
     private int attackCount;
     public float timer;
     private float resetTimer;
@@ -38,7 +38,7 @@ public class PlayerFunction : MonoBehaviour {
 	void Start ()
     {
         pc = GetComponent<PlayerController>();
-        _grounded = false;
+        grounded = false;
         baseSpeed = pc.playerSpeed;
         resetTimer = timer;
         gm = GameManager.Gm;
@@ -53,7 +53,7 @@ public class PlayerFunction : MonoBehaviour {
 
     public void GroundJump()
     {
-        _grounded = false;
+        grounded = false;
         StartCoroutine(SetJumpedToFalse());
         pc.animator.SetBool("Grounded", false);
         float jumpDirection = 0f;
@@ -112,7 +112,7 @@ public class PlayerFunction : MonoBehaviour {
 
     public void MoveCharacter()
     {
-        if (_grounded)
+        if (grounded)
         {
             //Vector2 move = new Vector2(pc.direction, transform.position.y);
             //pc.rb.MovePosition(move);
@@ -132,7 +132,7 @@ public class PlayerFunction : MonoBehaviour {
 
     public IEnumerator Dash()
     {
-        if (_grounded)
+        if (grounded)
         {
             dashing = true;
             pc.playerSpeed = pc.dashSpeed;
@@ -396,7 +396,7 @@ public class PlayerFunction : MonoBehaviour {
 
     public void PostHeavyAir()
     {
-        if (_grounded)
+        if (grounded)
         {
             stopHeavyAir = true;
         }
@@ -471,7 +471,7 @@ public class PlayerFunction : MonoBehaviour {
     public void OnCollisionEnterGround()
     {
         lightAirCount = 0;
-        _grounded = true;
+        grounded = true;
         pc.jumped = false;
         PostHeavyAir();
         pc.animator.SetBool("Grounded", true);
@@ -481,7 +481,7 @@ public class PlayerFunction : MonoBehaviour {
     public void OnCollisionExitGround()
     {
         pc.animator.SetBool("Grounded", false);
-        _grounded = false;
+        grounded = false;
 
         //float pushDirection = 0;
         //if (!pc.jumped)
@@ -504,7 +504,7 @@ public class PlayerFunction : MonoBehaviour {
     public void OnCollisionStayGround()
     {
         pc.animator.SetBool("Grounded", true);
-        _grounded = true;
+        grounded = true;
         pc.rb.gravityScale = 0;
     }
 
@@ -553,7 +553,7 @@ public class PlayerFunction : MonoBehaviour {
         {
             
             pc.state = PlayerController.State.Air;
-            _grounded = false;
+            grounded = false;
             pc.animator.SetBool("Grounded", false); 
         }
     }
@@ -580,7 +580,7 @@ public class PlayerFunction : MonoBehaviour {
 
     public bool Grounded
     {
-        get { return _grounded; }
+        get { return grounded; }
     }
 
     public float HAxis

@@ -14,8 +14,8 @@ public class GameManager : MonoBehaviour {
 
     public enum GameState { MainMenu = 0, PauseMenu = 1, Game = 2}
     public  GameState gameState;
-    public enum Difficulty { normal, hard};
-    public Difficulty difficulty;
+
+    public int difficulty;
 
     public float gameSpeed;
 
@@ -40,18 +40,10 @@ public class GameManager : MonoBehaviour {
         playerController = FindObjectOfType<PlayerController>();
         playerFunction = FindObjectOfType<PlayerFunction>();
     }
-
-
-    // Use this for initialization
-    void Start ()
-    {
-       
-	}
-	
-	// Update is called once per frame
+    
 	void Update ()
     {
-        //DetectController();
+        DetectController();
         DetectMouse();
 	}
 
@@ -99,7 +91,7 @@ public class GameManager : MonoBehaviour {
     // Detect if the user is currently using a controller or mouse
     public bool DetectController()
     {
-        bool keyboardDetected = false;
+        bool controllerDetected = false;
         if (!usingController)
         {
             if (Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0
@@ -108,10 +100,10 @@ public class GameManager : MonoBehaviour {
                 usingController = true;
                 Cursor.visible = false;
                 Cursor.lockState = CursorLockMode.Locked;
-                keyboardDetected = true;
+                controllerDetected = true;
             }
         }
-        return keyboardDetected;
+        return controllerDetected;
     }
 
 }

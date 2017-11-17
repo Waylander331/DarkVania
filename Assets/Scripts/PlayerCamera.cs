@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerCamera : MonoBehaviour {
 
     private PlayerController target;
-    private Camera playerCamera;
+    private Camera camera;
     private float vAxis;
     public int maxFieldOfView;
     public int minFieldOfView;
@@ -15,7 +15,7 @@ public class PlayerCamera : MonoBehaviour {
 	// Use this for initialization
 	void Start ()
     {
-        playerCamera = GetComponent<Camera>();
+        camera = GetComponent<Camera>();
         target = GameManager.Gm.playerController;
 	}
 	
@@ -29,13 +29,13 @@ public class PlayerCamera : MonoBehaviour {
     private void AdjustFieldOfView()
     {
         vAxis = Input.GetAxis("Zoom");
-        if(vAxis > 0.5 && playerCamera.orthographicSize < maxFieldOfView)
+        if(vAxis > 0.5 && camera.orthographicSize < maxFieldOfView)
         {
-            playerCamera.orthographicSize += vAxis / 10;
+            camera.orthographicSize += vAxis / 10;
         }
-        else if (vAxis < -0.5 && playerCamera.orthographicSize > minFieldOfView)
+        else if (vAxis < -0.5 && camera.orthographicSize > minFieldOfView)
         {
-            playerCamera.orthographicSize += vAxis /10;
+            camera.orthographicSize += vAxis /10;
         }
     }
 }

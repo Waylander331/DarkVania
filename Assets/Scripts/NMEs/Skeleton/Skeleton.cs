@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-// This script is in test and everything will be changed. Nothing here is final.
 public class Skeleton : MonoBehaviour {
 
     [SerializeField] private float skeletonSpeed;

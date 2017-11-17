@@ -1,23 +1,9 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine.UI;
+﻿using UnityEngine.UI;
 using UnityEngine;
 
 public class MainMenu : MonoBehaviour {
 
 
-    public Button buttonLoadGame;
-    public Button buttonOptions;
-    public Button exitButton;
+    public Button buttonLoadGame; //c'est le seul bouton qui a une reference, so rendu la mets le dans un autre script! :)
 
-
-    // Use this for initialization
-    void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 }
