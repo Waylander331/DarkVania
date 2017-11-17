@@ -55,7 +55,7 @@ public class Skeleton : MonoBehaviour {
     // Use this for initialization
     void Start ()
     {
-        pc = GameManager.Gm.playerController;
+        pc = GameManager.Instance.playerController;
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         Direction = Vector2.right /10;

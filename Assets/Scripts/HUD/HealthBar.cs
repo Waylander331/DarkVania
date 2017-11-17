@@ -10,16 +10,16 @@ public class HealthBar : MonoBehaviour {
 	// Use this for initialization
 	void Start ()
     {
-        gm = GameManager.Gm;
+        gm = GameManager.Instance;
         slider = GetComponent<Slider>();
-        slider.maxValue = GameManager.Gm.playerController.playerHp;
+        slider.maxValue = GameManager.Instance.playerController.playerHp;
 	}
 	
 	// Update is called once per frame
 	void Update ()
     {
         if(gm.gameState == GameManager.GameState.Game)
-            Health(GameManager.Gm.playerController.playerHp);
+            Health(GameManager.Instance.playerController.playerHp);
 	}
 
 

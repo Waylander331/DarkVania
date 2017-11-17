@@ -97,7 +97,7 @@ public class SaveFileHandler : MonoBehaviour {
     // Save a SaveFile at path and reshape/rename linked button
     private void CreateUserSaveFile()
     {
-        var newSave = new SaveFileTemplate(inputSaveName.text, (int)GameManager.Gm.difficulty, saveButtonId);
+        var newSave = new SaveFileTemplate(inputSaveName.text, (int)GameManager.Instance.difficulty, saveButtonId);
         XMLFilHelper.CreateXmlFile(path + saveButtonId, newSave);
         UIUtilities.ChangeButtonVisual(saveButton, saveButtonColors);
         string buttonText = "Name : " + newSave.Name + "\n" + GetDifficultyString();
@@ -114,15 +114,15 @@ public class SaveFileHandler : MonoBehaviour {
     // Change the difficulty and rename dropdown text
     public void ChangeDifficulty()
     {
-        GameManager.Gm.difficulty = dropdownDifficulty.value; 
+        GameManager.Instance.difficulty = dropdownDifficulty.value; 
         //est-ce que difficulty a vraiment besoin d'etre une enum ou ca pourrait etre un int?
-        dropdownDifficulty.captionText.text = "Difficulty : " + dropdownDifficulty.options[(int)GameManager.Gm.difficulty].text;
+        dropdownDifficulty.captionText.text = "Difficulty : " + dropdownDifficulty.options[(int)GameManager.Instance.difficulty].text;
     }
 
     public string GetDifficultyString()
     {
         string temp = "";
-        switch (GameManager.Gm.difficulty) //une switch fonctionne aussi avec une variable int, si jamais
+        switch (GameManager.Instance.difficulty) //une switch fonctionne aussi avec une variable int, si jamais
         {
             case 0:
                 temp = "Difficulty : Normal";

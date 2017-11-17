@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class MainMenuManager : MonoBehaviour {
 
-    public static MainMenuManager Instance = null; //jcrois pas que t'aies ebsoin de mettre = null. Pis tu pourais l'appeller simplement Instance
+    public static MainMenuManager Instance = null; 
 
     public SaveMenu saveMenu;
     public OptionsMenu optionsMenu;
@@ -18,7 +18,7 @@ public class MainMenuManager : MonoBehaviour {
     {
         get { return _state; }
        
-        set  //C'est pas mauvais d'avoir du code dans un setter mais rendu la t'es aussi bin faire un fonction qui s'en occupe
+        set
         {
             //if (value != state)
             _state = value;
@@ -31,8 +31,6 @@ public class MainMenuManager : MonoBehaviour {
             switch (State)
             {
                 case MainMenuState.mainMenu:
-                    //if (GameManager.Gm.usingController)
-                    //    GameManager.Gm.eventSystem.SetSelectedGameObject(mainMenu.buttonLoadGame.gameObject);
                     SetSelectedObject(mainMenu.buttonLoadGame.gameObject);
                     break;
                 case MainMenuState.saveMenu:
@@ -45,21 +43,15 @@ public class MainMenuManager : MonoBehaviour {
                     handleSaveFile.layoutAcceptDecline.gameObject.SetActive(false);
                     handleSaveFile.panelCreateNewSave.SetActive(false);
                     SetSelectedObject(saveMenu.saveButtons[0].gameObject);
-                    //if (GameManager.Gm.usingController)
-                    //    GameManager.Gm.eventSystem.SetSelectedGameObject(saveMenu.saveButtons[0].gameObject);
                     break;
                 case MainMenuState.optionsMenu:
                     SetSelectedObject(optionsMenu.dropdownLanguages.gameObject);
-                    //if (GameManager.Gm.usingController)
-                    //    GameManager.Gm.eventSystem.SetSelectedGameObject(optionsMenu.dropdownLanguages.gameObject);
                     break;
                 case MainMenuState.creatingSaveFile:
                     saveMenu.canvasGroupSaveMenu.alpha = 0.15f;
                     handleSaveFile.panelCreateNewSave.SetActive(true);
                     handleSaveFile.layoutAcceptDecline.gameObject.SetActive(true);
                     SetSelectedObject(handleSaveFile.buttonDecline.gameObject);
-                    //if (GameManager.Gm.usingController)
-                    //    GameManager.Gm.eventSystem.SetSelectedGameObject(handleSaveFile.buttonDecline.gameObject);
                     break;
 
                 case MainMenuState.loadDeleteMenu:
@@ -67,16 +59,10 @@ public class MainMenuManager : MonoBehaviour {
                     handleSaveFile.buttonLoadSave.gameObject.SetActive(true);
                     handleSaveFile.buttonDeleteSave.gameObject.SetActive(true);
                     SetSelectedObject(handleSaveFile.buttonLoadSave.gameObject);
-                    //if (GameManager.Gm.usingController) //C'est des details, mais ces 2 lignes similaires sont repetees. 
-                    //                                    //Tu pourrais en faire une mini fonction qui prent le bouton a selectionner en param
-                    //    GameManager.Gm.eventSystem.SetSelectedGameObject(handleSaveFile.buttonLoadSave.gameObject);
                     break;
             }
         }
     }
-
-    
-    //private string currentLang = "english";
 
     private void Awake()
     {
@@ -105,10 +91,10 @@ public class MainMenuManager : MonoBehaviour {
 
     private void Start()
     {
-        GameManager.Gm.usingController = false;
+        GameManager.Instance.usingController = false;
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
-        GameManager.Gm.eventSystem.SetSelectedGameObject(null);
+        GameManager.Instance.eventSystem.SetSelectedGameObject(null);
     }
 
     private void Update()
@@ -116,18 +102,15 @@ public class MainMenuManager : MonoBehaviour {
         HandleBackInput();
     }
 
-
     //-----------------------------------------------------
     // MainMenu Functions
     //-----------------------------------------------------
-
 
     // Switch to the appropriate menu using int
     public void SwitchMenuState(int state)
     {
         State = (MainMenuState)state;
     }
-
 
     // Send the user back to the previous menu
     public void HandleBackInput(bool buttonWasPressed = false)
@@ -149,13 +132,10 @@ public class MainMenuManager : MonoBehaviour {
         }
     }
 
-
-
-
     public void SetSelectedObject(GameObject obj)
     {
-        if(GameManager.Gm.usingController)
-            GameManager.Gm.eventSystem.SetSelectedGameObject(obj);
+        if(GameManager.Instance.usingController)
+            GameManager.Instance.eventSystem.SetSelectedGameObject(obj);
     }
     
 

@@ -41,7 +41,7 @@ public class PlayerFunction : MonoBehaviour {
         grounded = false;
         baseSpeed = pc.playerSpeed;
         resetTimer = timer;
-        gm = GameManager.Gm;
+        gm = GameManager.Instance;
 	}
 	
 	// Update is called once per frame

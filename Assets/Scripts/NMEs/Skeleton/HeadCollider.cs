@@ -8,7 +8,7 @@ public class HeadCollider : MonoBehaviour
 
     void Start()
     {
-        pc = GameManager.Gm.playerFunction;
+        pc = GameManager.Instance.playerFunction;
     }
 
     public void OnCollisionEnter2D(Collision2D coll)

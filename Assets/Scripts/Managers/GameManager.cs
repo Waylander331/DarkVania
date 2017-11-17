@@ -5,7 +5,7 @@ using UnityEngine.EventSystems;
 
 public class GameManager : MonoBehaviour {
 
-    public static GameManager Gm = null;
+    public static GameManager Instance = null;
 
     public EventSystem eventSystem;
 
@@ -27,11 +27,11 @@ public class GameManager : MonoBehaviour {
 
     void Awake()
     {
-        if(Gm == null)
+        if(Instance == null)
         {
-            Gm = this;
+            Instance = this;
         }
-        else if(Gm != this)
+        else if(Instance != this)
         {
             Destroy(gameObject);
             DontDestroyOnLoad(gameObject);

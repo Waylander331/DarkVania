@@ -11,8 +11,8 @@ public class GroundCollider : MonoBehaviour {
 
     private void Start()
     {
-        pf = GameManager.Gm.playerFunction;
-        pc = GameManager.Gm.playerController;
+        pf = GameManager.Instance.playerFunction;
+        pc = GameManager.Instance.playerController;
     }
 
 

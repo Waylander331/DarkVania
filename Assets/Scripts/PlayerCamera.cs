@@ -16,7 +16,7 @@ public class PlayerCamera : MonoBehaviour {
 	void Start ()
     {
         camera = GetComponent<Camera>();
-        target = GameManager.Gm.playerController;
+        target = GameManager.Instance.playerController;
 	}
 	
 	// Update is called once per frame
