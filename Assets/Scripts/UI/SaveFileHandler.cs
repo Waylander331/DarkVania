@@ -25,16 +25,10 @@ public class SaveFileHandler : MonoBehaviour {
     public ColorBlock saveButtonColors;
     public ColorBlock emptySaveButtonColors;
 
-    private string path;
-
-    private void Awake()
-    {
-        path = Application.persistentDataPath;
-    }
-
     // Look for existing save file in the Save Files document and change save buttons accordingly
     public void CheckForSaveFile()
     {
+        var path = Application.persistentDataPath;
         for (int i = 1; i < 4; i++)
         {
             if (File.Exists(path + i))
@@ -52,6 +46,8 @@ public class SaveFileHandler : MonoBehaviour {
     // If the current button holds a save file, switch to menu 5, else switch to menu 4
     public void GetSaveFileMenu()
     {
+        var path = Application.persistentDataPath;
+
         if (File.Exists(path + saveButtonId))
         {
             MainMenuManager.Instance.SwitchMenuState(5); // LoadDeleteMenu
@@ -97,6 +93,7 @@ public class SaveFileHandler : MonoBehaviour {
     // Save a SaveFile at path and reshape/rename linked button
     private void CreateUserSaveFile()
     {
+        var path = Application.persistentDataPath;
         var newSave = new SaveFileTemplate(inputSaveName.text, (int)GameManager.Instance.difficulty, saveButtonId);
         XMLFilHelper.CreateXmlFile(path + saveButtonId, newSave);
         UIUtilities.ChangeButtonVisual(saveButton, saveButtonColors);

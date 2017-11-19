@@ -85,12 +85,13 @@ public class MainMenuManager : MonoBehaviour {
     // Check for save file and set initial state
     void OnSceneLoad(Scene scene, LoadSceneMode mode)
     {
-        handleSaveFile.CheckForSaveFile(); // Check for save file upon loading the main menu
+       
         State = MainMenuState.mainMenu;
     }
 
     private void Start()
     {
+        handleSaveFile.CheckForSaveFile(); // Check for save file upon loading the main menu
         GameManager.Instance.usingController = false;
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
