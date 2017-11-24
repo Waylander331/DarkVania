@@ -1,11 +1,13 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public abstract class BasicAI : MonoBehaviour {
+public abstract class BaseAI : MonoBehaviour {
 
+    public int Health;
 
-    public BasicAI(int hp, float speed) { }
+    public float MovementSpeed;
 
-	
+    public int size;
+
+    public abstract void DetectPlayer();
+
 }

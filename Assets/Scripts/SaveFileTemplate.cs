@@ -1,5 +1,4 @@
-﻿using System.Xml;
-using System.Xml.Serialization;
+﻿using System.Xml.Serialization;
 
 [XmlRoot("Save File")]
 public class SaveFileTemplate {

@@ -1,9 +1,9 @@
 ﻿using UnityEngine.UI;
 using UnityEngine;
 using System.IO;
+using System;
 
-
-public class SaveFileHandler : MonoBehaviour {
+public class SaveFileHandler : MonoBehaviour, IMenuTransition {
 
     public int saveButtonId;
 
@@ -34,27 +34,14 @@ public class SaveFileHandler : MonoBehaviour {
             if (File.Exists(path + i))
             {
                 var button = MainMenuManager.Instance.saveMenu.saveButtons[i - 1];
-                var currentSaveFile = XMLFilHelper.LoadFile(path + i, typeof(SaveFileTemplate));
-                string buttonText = "Name : " + currentSaveFile + "\n" + GetDifficultyString();
+                var currentSaveFile = XMLFilHelper.LoadFile(path + i, typeof(SaveFileTemplate)) as SaveFileTemplate;
+                string buttonText = "Name : " + currentSaveFile.Name + "\n" + GetDifficultyString();
                 UIUtilities.ChangeButtonVisual(button, saveButtonColors);
                 UIUtilities.RenameButton(button, buttonText, TextAnchor.MiddleCenter, 18);
             }
         }
     }
-
-    // Attached to the SaveFile buttons
-    // If the current button holds a save file, switch to menu 5, else switch to menu 4
-    public void GetSaveFileMenu()
-    {
-        var path = Application.persistentDataPath;
-
-        if (File.Exists(path + saveButtonId))
-        {
-            MainMenuManager.Instance.SwitchMenuState(5); // LoadDeleteMenu
-        }
-        else
-            MainMenuManager.Instance.SwitchMenuState(4); // Creating Save File
-    }
+   
 
     // Attached to the Accept button 
     // Starts the button sequence to create or delete a save file
@@ -130,5 +117,27 @@ public class SaveFileHandler : MonoBehaviour {
                 break;
         }
         return temp;
+    }
+
+    public void SetMenuVisual()
+    {
+        var path = Application.persistentDataPath;
+
+        if (File.Exists(path + saveButtonId))
+        {
+            MainMenuManager.Instance.SwitchMenuState(5); // LoadDeleteMenu
+            MainMenuManager.Instance.saveMenu.canvasGroupSaveMenu.alpha = 0.15f;
+            MainMenuManager.Instance.saveFileHandler.buttonLoadSave.gameObject.SetActive(true);
+            MainMenuManager.Instance.saveFileHandler.buttonDeleteSave.gameObject.SetActive(true);
+            MainMenuManager.Instance.SetSelectedObject(MainMenuManager.Instance.saveFileHandler.buttonLoadSave.gameObject);
+        }
+        else
+        {
+            MainMenuManager.Instance.SwitchMenuState(4); // Creating Save File
+            MainMenuManager.Instance.saveMenu.canvasGroupSaveMenu.alpha = 0.15f;
+            MainMenuManager.Instance.saveFileHandler.panelCreateNewSave.SetActive(true);
+            MainMenuManager.Instance.saveFileHandler.layoutAcceptDecline.gameObject.SetActive(true);
+            MainMenuManager.Instance.SetSelectedObject(MainMenuManager.Instance.saveFileHandler.buttonDecline.gameObject);
+        }
     }
 }

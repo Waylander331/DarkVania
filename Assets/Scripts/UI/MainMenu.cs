@@ -1,9 +1,14 @@
 ﻿using UnityEngine.UI;
 using UnityEngine;
+using System;
 
-public class MainMenu : MonoBehaviour {
+public class MainMenu : MonoBehaviour, IMenuTransition {
 
 
-    public Button buttonLoadGame; //c'est le seul bouton qui a une reference, so rendu la mets le dans un autre script! :)
+    public Button buttonLoadGame;
 
+    public void SetMenuVisual()
+    {
+        MainMenuManager.Instance.SetSelectedObject(MainMenuManager.Instance.mainMenu.buttonLoadGame.gameObject);
+    }
 }

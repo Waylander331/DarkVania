@@ -1,31 +1,34 @@
 ﻿using System.Xml.Serialization;
 using System.IO;
-
+using UnityEngine;
 //Class used to create Xml File
 public static class XMLFilHelper {
 
     // Create an Xml file of object type
     public static void CreateXmlFile(string path, object file)
     {
-        var serializer = new XmlSerializer(file.GetType());
-        var stream = new FileStream(path, FileMode.Create);
-        serializer.Serialize(stream, file);
-        stream.Close();
+        using (var stream = new FileStream(path, FileMode.Create))
+        {
+            var serializer = new XmlSerializer(file.GetType());
+            serializer.Serialize(stream, file);
+            stream.Close();
+        }
     }
 
-    
     public static void DeleteFile(string path)
     {
         File.Delete(path);
     }
 
     // Load Xml file of the desired type
-    public static object LoadFile(string path, System.Type type)
+    public static object LoadFile(string path, System.Type fileType)
     {
-        var serializer = new XmlSerializer(type);
-        var stream = new FileStream(path, FileMode.Open);
-        var file = serializer.Deserialize(stream);
-        stream.Close();
-        return file;
+        using (var stream = new FileStream(path, FileMode.Open))
+        {
+            var serializer = new XmlSerializer(fileType);
+            var file = serializer.Deserialize(stream);
+            stream.Close();
+            return file;
+        }
     }
 }

@@ -12,7 +12,7 @@ public class HealthBar : MonoBehaviour {
     {
         gm = GameManager.Instance;
         slider = GetComponent<Slider>();
-        slider.maxValue = GameManager.Instance.playerController.playerHp;
+       // slider.maxValue = GameManager.Instance.playerController.playerHp;
 	}
 	
 	// Update is called once per frame

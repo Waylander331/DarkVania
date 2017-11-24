@@ -1,28 +1,33 @@
 ﻿using UnityEngine.UI;
 using UnityEngine;
 
-public class SaveMenu : MonoBehaviour {
-
-    MainMenuManager menuManager; //t'as pas vraiment besoin de garder une variable pour une clsse qui a un accesseur
+public class SaveMenu : MonoBehaviour, IMenuTransition {
 
     public Button[] saveButtons;
 
     public CanvasGroup canvasGroupSaveMenu;
-    
 
-    void Start () {
-        menuManager = MainMenuManager.Instance;
-	}
 
-    //ces fonctions-ci ne sont pas utilisees *******************************************
     public void AssignSaveButton(Button button)
     {
-        menuManager.handleSaveFile.saveButton = button;
+        MainMenuManager.Instance.saveFileHandler.saveButton = button;
     }
 
     public void IdentifyButton(int buttonIdentifier)
     {
-        menuManager.handleSaveFile.saveButtonId = buttonIdentifier;
+        MainMenuManager.Instance.saveFileHandler.saveButtonId = buttonIdentifier;
     }
 
+    public void SetMenuVisual()
+    {
+        canvasGroupSaveMenu.alpha = 1;
+        MainMenuManager.Instance.saveFileHandler.inputSaveName.text = "Enter Name";
+        MainMenuManager.Instance.saveFileHandler.inputSaveName.gameObject.SetActive(false);
+        MainMenuManager.Instance.saveFileHandler.dropdownDifficulty.gameObject.SetActive(false);
+        MainMenuManager.Instance.saveFileHandler.buttonLoadSave.gameObject.SetActive(false);
+        MainMenuManager.Instance.saveFileHandler.buttonDeleteSave.gameObject.SetActive(false);
+        MainMenuManager.Instance.saveFileHandler.layoutAcceptDecline.gameObject.SetActive(false);
+        MainMenuManager.Instance.saveFileHandler.panelCreateNewSave.SetActive(false);
+        MainMenuManager.Instance.SetSelectedObject(MainMenuManager.Instance.saveMenu.saveButtons[0].gameObject);
+    }
 }

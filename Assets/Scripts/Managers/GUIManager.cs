@@ -1,7 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
+﻿using UnityEngine;
+// Not used for now
 public class GUIManager : MonoBehaviour {
 
     public static GUIManager GuiM = null;

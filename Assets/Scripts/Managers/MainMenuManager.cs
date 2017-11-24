@@ -1,14 +1,15 @@
 ﻿using UnityEngine.SceneManagement;
 using UnityEngine;
+using System;
 
-public class MainMenuManager : MonoBehaviour {
+public class MainMenuManager : MonoBehaviour, IMenuTransition {
 
-    public static MainMenuManager Instance = null; 
+    public static MainMenuManager Instance;
 
     public SaveMenu saveMenu;
     public OptionsMenu optionsMenu;
     public MainMenu mainMenu;
-    public SaveFileHandler handleSaveFile;
+    public SaveFileHandler saveFileHandler;
 
 
     public enum MainMenuState { mainMenu = 1, optionsMenu, saveMenu, creatingSaveFile, loadDeleteMenu }
@@ -17,50 +18,10 @@ public class MainMenuManager : MonoBehaviour {
     public MainMenuState State // Activate game objects according to the current Main Menu State
     {
         get { return _state; }
-       
         set
         {
-            //if (value != state)
             _state = value;
-            mainMenu.gameObject.SetActive(State == MainMenuState.mainMenu);
-            optionsMenu.gameObject.SetActive(State == MainMenuState.optionsMenu);
-            saveMenu.gameObject.SetActive(State == MainMenuState.saveMenu || State == MainMenuState.creatingSaveFile || State == MainMenuState.loadDeleteMenu);
-            saveMenu.canvasGroupSaveMenu.interactable = (State == MainMenuState.saveMenu);
-            handleSaveFile.gameObject.SetActive(State == MainMenuState.creatingSaveFile || State == MainMenuState.loadDeleteMenu);
-
-            switch (State)
-            {
-                case MainMenuState.mainMenu:
-                    SetSelectedObject(mainMenu.buttonLoadGame.gameObject);
-                    break;
-                case MainMenuState.saveMenu:
-                    saveMenu.canvasGroupSaveMenu.alpha = 1;
-                    handleSaveFile.inputSaveName.text = "Enter Name";
-                    handleSaveFile.inputSaveName.gameObject.SetActive(false);
-                    handleSaveFile.dropdownDifficulty.gameObject.SetActive(false);
-                    handleSaveFile.buttonLoadSave.gameObject.SetActive(false);
-                    handleSaveFile.buttonDeleteSave.gameObject.SetActive(false);
-                    handleSaveFile.layoutAcceptDecline.gameObject.SetActive(false);
-                    handleSaveFile.panelCreateNewSave.SetActive(false);
-                    SetSelectedObject(saveMenu.saveButtons[0].gameObject);
-                    break;
-                case MainMenuState.optionsMenu:
-                    SetSelectedObject(optionsMenu.dropdownLanguages.gameObject);
-                    break;
-                case MainMenuState.creatingSaveFile:
-                    saveMenu.canvasGroupSaveMenu.alpha = 0.15f;
-                    handleSaveFile.panelCreateNewSave.SetActive(true);
-                    handleSaveFile.layoutAcceptDecline.gameObject.SetActive(true);
-                    SetSelectedObject(handleSaveFile.buttonDecline.gameObject);
-                    break;
-
-                case MainMenuState.loadDeleteMenu:
-                    saveMenu.canvasGroupSaveMenu.alpha = 0.15f;
-                    handleSaveFile.buttonLoadSave.gameObject.SetActive(true);
-                    handleSaveFile.buttonDeleteSave.gameObject.SetActive(true);
-                    SetSelectedObject(handleSaveFile.buttonLoadSave.gameObject);
-                    break;
-            }
+            SetMenuVisual();
         }
     }
 
@@ -77,11 +38,12 @@ public class MainMenuManager : MonoBehaviour {
         }
     }
 
-    public void OnEnable()
+    private void OnEnable()
     {
         SceneManager.sceneLoaded += OnSceneLoad;
     }
 
+    
     // Check for save file and set initial state
     void OnSceneLoad(Scene scene, LoadSceneMode mode)
     {
@@ -89,9 +51,9 @@ public class MainMenuManager : MonoBehaviour {
         State = MainMenuState.mainMenu;
     }
 
-    private void Start()
+    public void Start()
     {
-        handleSaveFile.CheckForSaveFile(); // Check for save file upon loading the main menu
+        saveFileHandler.CheckForSaveFile(); // Check for save file upon loading the main menu
         GameManager.Instance.usingController = false;
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
@@ -106,6 +68,8 @@ public class MainMenuManager : MonoBehaviour {
     //-----------------------------------------------------
     // MainMenu Functions
     //-----------------------------------------------------
+
+
 
     // Switch to the appropriate menu using int
     public void SwitchMenuState(int state)
@@ -130,6 +94,28 @@ public class MainMenuManager : MonoBehaviour {
                     State = MainMenuState.saveMenu;
                     break;
             }
+        }
+    }
+
+    public void SetMenuVisual()
+    {
+        mainMenu.gameObject.SetActive(State == MainMenuState.mainMenu);
+        optionsMenu.gameObject.SetActive(State == MainMenuState.optionsMenu);
+        saveMenu.gameObject.SetActive(State == MainMenuState.saveMenu || State == MainMenuState.creatingSaveFile || State == MainMenuState.loadDeleteMenu);
+        saveMenu.canvasGroupSaveMenu.interactable = (State == MainMenuState.saveMenu);
+        saveFileHandler.gameObject.SetActive(State == MainMenuState.creatingSaveFile || State == MainMenuState.loadDeleteMenu);
+
+        switch (State)
+        {
+            case MainMenuState.mainMenu:
+                mainMenu.SetMenuVisual();
+                break;
+            case MainMenuState.saveMenu:
+                saveMenu.SetMenuVisual();
+                break;
+            case MainMenuState.optionsMenu:
+                optionsMenu.SetMenuVisual();
+                break;
         }
     }
 

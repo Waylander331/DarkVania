@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public class Skeleton : MonoBehaviour {
+public class Skeleton : BaseAI {
 
     [SerializeField] private float skeletonSpeed;
     public float rangeOfDetection;
@@ -60,6 +60,7 @@ public class Skeleton : MonoBehaviour {
         animator = GetComponent<Animator>();
         Direction = Vector2.right /10;
         state = State.Patrol;
+        Health = 5;
     }
 	
 
@@ -72,7 +73,7 @@ public class Skeleton : MonoBehaviour {
         switch (state)
         {
             case State.Patrol:
-                Patrol();
+                DetectPlayer();
                 break;
 
             case State.Chase:
@@ -99,7 +100,7 @@ public class Skeleton : MonoBehaviour {
         StartCoroutine(Stagger());
     }
 
-    public void Patrol()
+    public override void DetectPlayer()
     {
         animator.SetBool("Charge", false);
         if (!playerDetected)
