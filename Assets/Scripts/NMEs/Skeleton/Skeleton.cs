@@ -1,242 +1,72 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System;
+using System.Collections;
 using UnityEngine;
 
 
-public class Skeleton : BaseAI {
+public class Skeleton : BaseAI, IBaseFunction {
 
-    [SerializeField] private float skeletonSpeed;
-    public float rangeOfDetection;
-    public float lightStaggerTimer;
-    public float heavyStaggerTimer;
-    private float staggerTimer;
-    //private bool staggered;
+    private BaseState _currentState;
+    private bool _isPlayerDetected;
 
-    private PlayerController pc;
-    private Rigidbody2D rb;
-    private Animator animator;
-
-    public bool playerDetected = false;
-
-    public float skeletonHp;
-
-    private Vector3 target;
-
-    private Quaternion leftRot = new Quaternion(0, 180, 0, 0);
-    private Quaternion rightRot = new Quaternion(0, 0, 0, 0);
-    private bool facingLeft;
-    private bool facingRight = true;
-
-    public enum State { Chase, Patrol, Attack, Staggered, Wait, Dead}
-    public State state;
-
-    private Vector2 waypoint;
-    private Vector2 direction;
-
-    public Vector2 Direction
+    public bool IsPlayerDetected
     {
         get
         {
-            return direction;
+            return _isPlayerDetected;
         }
+
         set
         {
-            direction = value;
-            Vector2 position = new Vector2(transform.position.x, transform.position.y);
-            waypoint = position + direction;
+            _isPlayerDetected = value;
         }
-    }
-
-    private void Awake()
-    {
-        
     }
 
     // Use this for initialization
-    void Start ()
+    public override void Start ()
     {
-        pc = GameManager.Instance.playerController;
-        rb = GetComponent<Rigidbody2D>();
-        animator = GetComponent<Animator>();
-        Direction = Vector2.right /10;
-        state = State.Patrol;
-        Health = 5;
+        GameManager.Instance.enemies.Add(this);
+        _currentState = new PatrolState();
     }
-	
 
-
-	// Update is called once per frame
-	void FixedUpdate ()
+    public override void Update()
     {
-        target = new Vector3(pc.transform.position.x, pc.transform.position.y, 0);
-
-        switch (state)
+ 
+        if (_currentState.CanTransition() != null && _currentState.CanTransition() == this)
         {
-            case State.Patrol:
-                DetectPlayer();
-                break;
-
-            case State.Chase:
-                ChasePlayer();
-                break;
-
-            case State.Attack:
-                StartCoroutine(Attack());
-                break;
-
-            case State.Wait:
-                Wait();
-                break;
-
-            case State.Dead:
-                StartCoroutine(Dead());
-                break;
-        }
-	}
-
-
-    public void Wait()
-    {
-        StartCoroutine(Stagger());
-    }
-
-    public override void DetectPlayer()
-    {
-        animator.SetBool("Charge", false);
-        if (!playerDetected)
-        {       
-            if(Vector2.Distance(transform.position, pc.transform.position) < rangeOfDetection)
-            {
-                if (pc.transform.position.x < transform.position.x)
-                {
-                    playerDetected = true;
-                    facingRight = false;
-                    facingLeft = true;
-                    Direction = Vector2.left / 10;
-                    transform.rotation = leftRot;
-                }
-                else if (pc.transform.position.x > transform.position.x)
-                {
-                    playerDetected = true;
-                    facingRight = true;
-                    facingLeft = false;
-                    Direction = Vector2.right / 10;
-                    transform.rotation = rightRot;
-                }
-            }
-            else
-            {
-                Direction = Direction;
-            }
-
-            //animator.SetTrigger("Walk");
-            //animator.speed = 0.5f;
-            //Vector2 move = Vector2.MoveTowards(transform.position, waypoint, skeletonSpeed / 2 * Time.deltaTime);
-            //rb.MovePosition(move);
+            _currentState.TransitionOut();
+            _currentState = _currentState.NextState();
+            _currentState.TransitionIn();
         }
         else
-        {
-            animator.speed = 1;
-            state = State.Chase;
-            
-        }
-       
+            _currentState.Update();
     }
 
-    public void ChasePlayer()
-    {
-       StartCoroutine(DirectTowardsTarget());
-        //if (transform.position.x > perimeter.bounds.max.x && facingRight)
-        //{
-        //    if(!playerDetected)
-        //    {
-        //        state = State.Patrol;
-        //    }
-        //    facingRight = false;
-        //    facingLeft = true;
-        //    Direction = Vector2.left / 10;
-        //    transform.rotation = leftRot;
-        //}
-        //else if (transform.position.x < perimeter.bounds.min.x && facingLeft)
-        //{
-        //    if (!playerDetected)
-        //    {
-        //        state = State.Patrol;
-        //    }
-        //    facingRight = true;
-        //    facingLeft = false;
-        //    Direction = Vector2.right / 10;
-        //    transform.rotation = rightRot;
-        //}
-
-        if (Vector3.Distance(transform.position, target) > 2.1f)
-        {
-            Direction = Direction;
-            animator.speed = 0.5f;
-            animator.SetBool("Charge", true);
-            Vector2 move = Vector2.MoveTowards(transform.position, waypoint, skeletonSpeed);
-            rb.MovePosition(move);
-        }
-        else
-        {
-            animator.SetBool("Charge", false);
-            animator.SetTrigger("ChargeAttack");
-            //yield return new WaitForSeconds(0);
-            state = State.Attack;
-            StartCoroutine(Attack());
-        }
-    }
-
-    public IEnumerator Attack()
-    {
-        if (Vector3.Distance(transform.position, target) > 2.5f)
-        {
-            state = State.Chase;
-            
-        }
-        else if (state == State.Attack)
-        {
-            int randomFloat = Random.Range(0, 2);
-            yield return new WaitForSeconds(randomFloat);
-            int randomInt = Random.Range(0, 100);
-            if(randomInt > 49)
-            {
-                animator.SetTrigger("Attack1");
-            }
-            else
-            {
-                animator.SetTrigger("Attack2");
-            }
-            
-        }
-    }
-
-    void OnTriggerEnter2D(Collider2D other)
+    public void OnTriggerEnter2D(Collider2D other)
     {
         if (other.tag == "Weapon")
         {
-            if (pc.subState == PlayerController.SubState.Light)
+            if (GameManager.Instance.playerController.subState == PlayerController.SubState.Light)
             {
-                if(state == State.Wait)
+                if(state == State.Idle)
                 {
-                    staggerTimer += lightStaggerTimer;
+                    staggerTimer += staggerTime;
                 }
                 else
                 {
-                    skeletonHp -= 1;
-                    state = State.Wait;
+                    Health -= 1;
+                    state = State.Idle;
                 }
             }
             else
             {
-                if(state == State.Wait)
+                if(state == State.Idle)
                 {
-                    staggerTimer += heavyStaggerTimer;
+                    staggerTimer += staggerTime;
                 }
                 else
                 {
-                    skeletonHp -= 1;
-                    state = State.Wait;
+                    Health -= 1;
+                    state = State.Idle;
                 }                
             }
         }
@@ -244,12 +74,10 @@ public class Skeleton : BaseAI {
 
     public IEnumerator Stagger()
     {
-        if (skeletonHp <= 0)
+        if (Health <= 0)
         {
-            StartCoroutine(Dead());
+
         }
-          
-       Debug.Log("Staggered");
 
         animator.Play("Skeleton_Idle");
         animator.SetBool("Charge", false);
@@ -258,7 +86,7 @@ public class Skeleton : BaseAI {
         yield return new WaitForSeconds(staggerTimer);
         staggerTimer = 0;
 
-        if(skeletonHp > 0)
+        if (Health > 0)
         {
             if (Vector2.Distance(transform.position, target) > 2.5f)
             {
@@ -270,54 +98,60 @@ public class Skeleton : BaseAI {
 
     }
 
-    public IEnumerator DirectTowardsTarget()
+    public void Patrol()
     {
-        if (target.x > transform.position.x )
+        if (Vector2.Distance(transform.position, GameManager.Instance.playerController.transform.position) < rangeOfDetection)
         {
-            if(facingRight != true)
+            if (GameManager.Instance.playerController.transform.position.x < transform.position.x)
             {
-                facingRight = true;
-                yield return new WaitForSeconds(0.5f);
-                Direction = Vector2.right / 10;
-                facingLeft = false;
-                transform.rotation = rightRot;
-            }   
-        }
-        else if (target.x < transform.position.x)
-        {
-            if (facingLeft != true)
-            {
-                facingLeft = true;
-                yield return new WaitForSeconds(0.5f);
-                Direction = Vector2.left / 10;
+                IsPlayerDetected = true;
                 facingRight = false;
+                facingLeft = true;
+                Direction = Vector2.left / 10;
                 transform.rotation = leftRot;
             }
-        }
-    }
-
- 
-
-    public IEnumerator Dead()
-    {
-        if (skeletonHp <= 0)
-        {
-            state = State.Dead;
-            if (facingRight)
+            else if (GameManager.Instance.playerController.transform.position.x > transform.position.x)
             {
-                transform.rotation = leftRot;
-            }
-            else
-            {
+                IsPlayerDetected = true;
+                facingRight = true;
+                facingLeft = false;
+                Direction = Vector2.right / 10;
                 transform.rotation = rightRot;
             }
-
-            animator.SetTrigger("Dead");
-            yield return new WaitForSeconds(2f);
-            gameObject.SetActive(false);
         }
-        else state = State.Wait;
-        
+        else
+        {
+            Direction = Direction;
+        }
+        animator.SetTrigger("Walk");
+        animator.speed = 0.5f;
+        Vector2 move = Vector2.MoveTowards(transform.position, waypoint, MovementSpeed / 2 * Time.deltaTime);
+        rb.MovePosition(move);
     }
 
+
+    public void Attack()
+    {
+        throw new NotImplementedException();
+    }
+
+    public void Dead()
+    {
+        throw new NotImplementedException();
+    }
+
+    public void Chase()
+    {
+        throw new NotImplementedException();
+    }
+
+    public void Idle()
+    {
+        throw new NotImplementedException();
+    }
+
+    //public bool PlayerDetected()
+    //{
+    //    return playerDetected;
+    //}
 }

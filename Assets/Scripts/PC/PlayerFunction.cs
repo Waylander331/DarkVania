@@ -11,8 +11,8 @@ public class PlayerFunction : MonoBehaviour {
     private int attackCount;
     public float timer;
     private float resetTimer;
-   
-  
+
+    public float fAxis;
 
     private Quaternion leftRot = new Quaternion(0, 180, 0, 0);
     private Quaternion rightRot = new Quaternion(0, 0, 0, 0);
@@ -42,12 +42,15 @@ public class PlayerFunction : MonoBehaviour {
         baseSpeed = pc.playerSpeed;
         resetTimer = timer;
         gm = GameManager.Instance;
+
+        
 	}
 	
 	// Update is called once per frame
 	void Update ()
     {
         PlayerCustomPhysics();
+        fAxis = HAxis;
     }
 
 

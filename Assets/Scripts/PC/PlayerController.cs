@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 
 [RequireComponent(typeof(PlayerFunction))]
@@ -45,6 +43,7 @@ public class PlayerController : MonoBehaviour {
         jumped = false;
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        
     }
 	
 	// Update is called once per frame
@@ -89,7 +88,7 @@ public class PlayerController : MonoBehaviour {
 
     void FixedUpdate()
     {
-        StartCoroutine(pf.PostCharge());
+        //StartCoroutine(pf.PostCharge());
         switch (state)
         {
             case State.Idle:
@@ -97,8 +96,6 @@ public class PlayerController : MonoBehaviour {
                 break;
 
             case State.Moving:
-
-               
                 pf.AnimateMovement();
                 break;
 
@@ -184,7 +181,6 @@ public class PlayerController : MonoBehaviour {
     {
         if (pf.Grounded)
         {
-
             if (subState == SubState.Default || subState == SubState.Light)
             {
                 if (Input.GetButtonDown("Fire1"))

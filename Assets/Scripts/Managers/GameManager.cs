@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System.Collections.Generic;
+using System.Collections;
 using UnityEngine.SceneManagement;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -19,7 +20,8 @@ public class GameManager : MonoBehaviour {
 
     public float gameSpeed;
 
-    public Skeleton[] skeletons;
+    public List<BaseAI> enemies;
+
 
     [HideInInspector]
     public bool usingController;
@@ -40,8 +42,12 @@ public class GameManager : MonoBehaviour {
         playerController = FindObjectOfType<PlayerController>();
         playerFunction = FindObjectOfType<PlayerFunction>();
     }
-    
-	void Update ()
+
+    private void OnEnable()
+    {
+        enemies = new List<BaseAI>();
+    }
+    void Update ()
     {
         DetectController();
         DetectMouse();
@@ -49,9 +55,9 @@ public class GameManager : MonoBehaviour {
 
     public void PlayerDead()
     {
-        for (int i = 0; i < skeletons.Length; i++)
+        for (int i = 0; i < enemies.Count; i++)
         {
-            skeletons[i].state = Skeleton.State.Wait;
+            enemies[i].state = Skeleton.State.Idle;
         }
     }
 
