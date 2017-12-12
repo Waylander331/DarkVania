@@ -42,8 +42,4 @@ public class PatrolState : BaseState
         }
 
     }
-    //public void Patrol()
-    //{
-        
-    //}
 }

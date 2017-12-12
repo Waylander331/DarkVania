@@ -7,7 +7,7 @@ public class Skeleton : BaseAI, IBaseFunction {
 
     private BaseState _currentState;
     private bool _isPlayerDetected;
-
+ 
     public bool IsPlayerDetected
     {
         get
@@ -31,7 +31,7 @@ public class Skeleton : BaseAI, IBaseFunction {
     public override void Update()
     {
  
-        if (_currentState.CanTransition() != null && _currentState.CanTransition() == this)
+        if (_currentState.CanTransition() == this)
         {
             _currentState.TransitionOut();
             _currentState = _currentState.NextState();
@@ -104,7 +104,6 @@ public class Skeleton : BaseAI, IBaseFunction {
         {
             if (GameManager.Instance.playerController.transform.position.x < transform.position.x)
             {
-                IsPlayerDetected = true;
                 facingRight = false;
                 facingLeft = true;
                 Direction = Vector2.left / 10;
@@ -112,12 +111,12 @@ public class Skeleton : BaseAI, IBaseFunction {
             }
             else if (GameManager.Instance.playerController.transform.position.x > transform.position.x)
             {
-                IsPlayerDetected = true;
                 facingRight = true;
                 facingLeft = false;
                 Direction = Vector2.right / 10;
                 transform.rotation = rightRot;
             }
+            IsPlayerDetected = true;
         }
         else
         {
